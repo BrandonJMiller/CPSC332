@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>10-10 Participation</title>
+
+    <script>
+        try {
+            arrowAdd2(error) 
+        } catch (error) {
+            console.log(error);
+        }
+        finally{ }
+        
+        let arrowAdd2 = (x, y, z) => x + 2;
+        arrowAdd2(40, 1, 2);
+        var myArray = [1, 2, 3, 4];
+        for (let i=0; i < myArray.length; i++)
+        {
+            console.log(myArray[i])
+        }
+        
+        for (const myVal of myArray) {
+            console.log(myVal);
+        }
+        myArray.forEach(function(item, i) {
+            console.log(item + " " + i)
+        });
+        
+        var myObject = {
+            name: "defaultName",
+            someNumber: 42,
+            anArray: [1,2,3,4,5,6],
+
+            //object method
+            echo: function(value) {
+;               console.log(value)
+            },
+
+            get numberPlusOne() {
+                return this.someNumber + 1;
+            },
+
+            set someNumberPlusAnother(num){
+                this.someNumber += num;
+            },
+        };
+        myObject.name = "Bob Smith";
+        console.log(myObject.name);
+        myObject.echo("Hello World!")
+        
+        console.log(myObject.numberPlusOne);
+        console.log(myObject.someNumberPlusAnother = 9000);
+        console.log(myObject.someNumber);
+
+        let dateTimeNow = new Date();
+        console.log(dateTimeNow);
+
+
+        var currentDate = {
+            dateTime: null
+        };
+
+        document.getElementById("update-date")
+            .addEventListener("click", pizzaTime);
+
+        function pizzaTime() {
+            console.log("It's pizza time");
+        };
+    </script>
+</head>
+<body>
+    <h1>More JavaScript!</h1>
+    <div>
+        <p>
+            <span id="date-text">
+                Click the button...
+            </span>
+        </p>
+        <p>
+            <button id="update-time">
+                Click to see current date time!
+            </button>
+        </p>
+    </div>
+</body>
+<footer>
+    <a href="../../">Back to the index</a>
+</footer>
+
+</html>

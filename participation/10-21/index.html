@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPSC 332 10/21 Participation</title>
+    <style>
+       
+    </style>
+
+    <script>
+        let uname = document.getElementById("name");
+        
+        if (localStorage.getItem("name"))
+        {
+            uname.value = localStorage.getItem("playerName");
+        }
+
+        var btn = document.getElementById("nbtn")
+        if (btn) {
+        btn.addEventListener("click", function() {
+            localStorage.setItem("name", uname.value);
+        });
+    }
+
+    </script>
+</head>
+
+<fieldset>
+    <legend>CPSC 332 10/21 Participation</legend>
+    <form id="data" action="submission.html" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button id="nbtn" type="button">Save Data</button><br><br>
+
+        <label for="id">Id:</label>
+        <input type="text" id="id" name="id" required>
+        <button type="button">Save Data</button><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <button type="button">Save Data</button><br><br>
+
+        <input type="submit" value="Submit Response">
+    </form>
+</fieldset>
+
+<footer>
+    <a href="../../">Back to the index</a>
+</footer>
+
+</html>
